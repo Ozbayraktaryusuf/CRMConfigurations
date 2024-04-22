@@ -14,7 +14,7 @@ spring:
     name: identityService
   datasource:
     url: jdbc:postgresql://localhost:5432/crm_identity
-    username: postgres
+    username: postgre
     password: 12345
   jpa:
     hibernate:
