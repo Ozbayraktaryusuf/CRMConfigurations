@@ -18,6 +18,9 @@ spring:
         routes[0]:
           id: customer-service
           predicates[0]: Path=/customer-service/api/v1/customers/**
+          predicates[1]: Path=/customer-service/api/v1/addresses/**
+          predicates[2]: Path=/customer-service/api/v1/individual-customers/**
+          predicates[3]: Path=/customer-service/api/v1/cities/**
           uri: lb://customerService
         routes[1]:
           id: discoveryserver
@@ -33,3 +36,9 @@ spring:
             id: search-service
             predicates[0]: Path=/search-service/api/v1/customers/**
             uri: lb://searchService
+          routes[4]:
+            id: account-service
+            predicates[0]: Path=/account-service/api/v1/accounts/**
+            predicates[1]: Path=/account-service/api/v1/addresses/**
+            predicates[2]: Path=/account-service/api/v1/account-types/**
+            uri: lb://accountService
