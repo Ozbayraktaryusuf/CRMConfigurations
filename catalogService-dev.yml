@@ -13,7 +13,7 @@ spring:
   application:
     name: accountService
   datasource:
-    url: jdbc:postgresql://localhost:5432/crm_account
+    url: jdbc:postgresql://localhost:5432/crm_catalog
     username: postgres
     password: 12345
   jpa:
