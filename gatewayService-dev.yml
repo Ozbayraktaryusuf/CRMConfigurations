@@ -42,3 +42,7 @@ spring:
             predicates[1]: Path=/account-service/api/v1/addresses/**
             predicates[2]: Path=/account-service/api/v1/account-types/**
             uri: lb://accountService
+          routes[5]:
+            id: catalog-service
+            predicates[0]: Path=/catalog-service/api/v1/products/**
+            uri: lb://catalogService
