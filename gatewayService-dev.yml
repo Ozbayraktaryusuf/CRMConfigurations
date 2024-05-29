@@ -46,3 +46,11 @@ spring:
             id: catalog-service
             predicates[0]: Path=/catalog-service/api/v1/products/**
             uri: lb://catalogService
+          routes[6]:
+            id: basket-service
+            predicates[0]: Path=/basket-service/api/v1/baskets/**
+            uri: lb://basketService
+          routes[7]:
+            id: order-service
+            predicates[0]: Path=/order-service/api/v1/orders/**
+            uri: lb://orderService
